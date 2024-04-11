@@ -1,9 +1,16 @@
-WITH CTE AS (
+USE AnimatedTvSeries
+
+SELECT STRING_AGG(genre, ', ') AS Generos
+FROM (
     SELECT DISTINCT genre
-    FROM tabla2
-)
-SELECT 
-    STUFF((
-        SELECT DISTINCT ', ' + CASE WHEN CHARINDEX('|', genre) > 0 THEN LEFT(genre, CHARINDEX('|', genre) - 1) ELSE genre END
-        FROM CTE
-        FOR XML PATH('')), 1, 2, '') AS concatenated_genres
+    FROM (
+        SELECT TRIM(value) AS genre
+        FROM tabla2
+        CROSS APPLY STRING_SPLIT(genre, '|')
+        WHERE genre LIKE '%|%'
+        UNION ALL
+        SELECT genre
+        FROM tabla2
+        WHERE genre NOT LIKE '%|%'
+    ) AS UniqueGenres
+) AS DistinctGenres;
