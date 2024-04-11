@@ -1,0 +1,3 @@
+SELECT *
+FROM tabla2
+WHERE Title LIKE 'C%';
