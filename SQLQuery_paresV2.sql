@@ -18,7 +18,7 @@ SELECT title as 'Peliculas y series animadas peor evaluadas IMDb', google_users 
 DELETE FROM table1 WHERE imdb < 3.5;
 SELECT * FROM table1;
 
---P12 -- no me tira null TT
+--P12
 SELECT ROUND(AVG(CONVERT(float, reemplazo3)), 2) as Promedio FROM (
 		SELECT REPLACE(reemplazo2, ' ', '') as reemplazo3 FROM (
 		SELECT REPLACE(reemplazo, 'h', '.') as reemplazo2 FROM (
