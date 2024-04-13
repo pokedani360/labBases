@@ -35,8 +35,9 @@ run_time as 'Duracion', stars as 'Estrellas', genre as 'Genero', summary as 'Sin
 FROM table3 
 WHERE episodes IS NOT NULL AND run_time IS NOT NULL;
 
---P16 - arreglada :3
-SELECT table1.* FROM (
+--P16
+SELECT table1.title AS 'Titulo', table1.episodes AS 'Episodios', table1.years AS 'Años', table1.original_channel AS 'Canal', table1.american_company AS 'Productora',
+table1.note as 'Nota', table1.technique AS 'Tecnica', table1.imdb AS 'Rating IMDb', table1.google_users AS '% Aprobacion' FROM (
 	SELECT years from table1 WHERE years IS NOT NULL
 	GROUP BY years)
 AS t1
