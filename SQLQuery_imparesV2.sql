@@ -1,8 +1,8 @@
 --IMPARES
 
 --P1
-SELECT title AS 'Peliculas y series animadas', years AS 'Año de Lanzamiento (Ascendente)' FROM table1 ORDER BY years ASC;
-SELECT title AS 'Titulo', released_year as 'Año de Lanzamiento' FROM tabla2 WHERE released_year IS NOT NULL ORDER BY released_year ASC;
+SELECT title AS 'Peliculas y series animadas', years AS 'Aï¿½o de Lanzamiento (Ascendente)' FROM table1 ORDER BY years ASC;
+SELECT title AS 'Titulo', released_year as 'Aï¿½o de Lanzamiento' FROM table2 WHERE released_year IS NOT NULL ORDER BY released_year ASC;
 
 
 --P3
@@ -30,22 +30,22 @@ FROM (
     SELECT DISTINCT genre
     FROM (
         SELECT TRIM(value) AS genre
-        FROM tabla2
+        FROM table2
         CROSS APPLY STRING_SPLIT(genre, '|')
         WHERE genre LIKE '%|%'
         UNION ALL
         SELECT genre
-        FROM tabla2
+        FROM table2
         WHERE genre NOT LIKE '%|%'
     ) AS UniqueGenres
 ) AS DistinctGenres;
 
 --P15
 SELECT title AS 'Peliculas con C' --Falta peliculas animadas?
-FROM tabla2
+FROM table2
 WHERE Title LIKE 'C%';
 
 --P17
 SELECT t2.Title AS 'Peliculas que tambien son series animadas'
-FROM tabla2 t2
+FROM table2 t2
 INNER JOIN table1 t1 ON t2.Title = t1.Title;
