@@ -1,8 +1,7 @@
 --IMPARES
 
 --P1
-SELECT title AS 'Peliculas y series animadas', years AS 'A�o de Lanzamiento (Ascendente)' FROM table1 ORDER BY years ASC;
-SELECT title AS 'Titulo', released_year as 'A�o de Lanzamiento' FROM table2 WHERE released_year IS NOT NULL ORDER BY released_year ASC;
+SELECT title AS 'Peliculas y series animadas', years AS 'Año de Lanzamiento (Ascendente)' FROM table1 ORDER BY years ASC;
 
 
 --P3
