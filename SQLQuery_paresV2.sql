@@ -15,8 +15,8 @@ SELECT title as 'Series y peliculas de Cartoon Network' from table1 where origin
 SELECT title as 'Peliculas y series animadas peor evaluadas IMDb', google_users AS 'Calificacion' FROM table1 where google_users < '30%' AND google_users != '100%' order by google_users ASC;
 
 --P10 Defensa
-DELETE FROM table1 WHERE imdb < 3.5;
-SELECT * FROM table1;
+--DELETE FROM table1 WHERE imdb < 3.5;
+--SELECT * FROM table1;
 
 --P12
 SELECT ROUND(AVG(CONVERT(float, reemplazo3)), 2) as Promedio FROM (
