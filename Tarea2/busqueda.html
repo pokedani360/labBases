@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title> Busqueda </title>
+</head>
+<body>
+    <h1>Barra de Búsqueda</h1>
+    <form action = "" method = "GET">
+        <input type = "number" name = "numero_habitacion"><br>
+        <input type = "submit" name = "Buscar" value = "Buscar">
+    </form>
+    <br><br><br>
+    <?php
+    require 'db_config.php';
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        $num= $_GET["numero_habitacion"];
+    }
+    ?>
+</body

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title> Home </title>
+</head>    
+<body>
+    <h1>Ingresa los datos para tu reserva</h1>
+    <form action="reservas.php" method="post">
+        <label for="rut_huesped">R.U.T</label><br>
+        <input type="text" id="rut_huesped" name="rut_huesped" pattern="[0-9]{8}"required><br>
+        <label for="numero_habitacion">Numero_habitacion</label><br>
+        <input type="number" id="numero_habitacion" name="numero_habitacion"><br>
+        <br>        
+        <br>
+        <label for="fecha_checkin">Check-in</label><br>
+        <input type="date" id="fecha_checkin" name="fecha_checkin"><br>
+        <br>
+        <label for="fecha_checkout">Check-out</label><br>
+        <input type="date" id="fecha_checkout" name="fecha_checkout"><br>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
