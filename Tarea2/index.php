@@ -7,12 +7,14 @@
 </head>    
 <body>
     <h1> :o </h1>
-    <button onclick="window.location.href='busqueda.php'">Reservar</button>
+    <button onclick="window.location.href='busqueda.php'">Buscar Habitacion y Reservar</button>
     <br>
     <button onclick="window.location.href='actualizaciones.html'">Actualizar reserva</button>
     <br>
     <button onclick="window.location.href='eliiminar.php'">Eliminar reserva</button>
     <br>
     <button onclick="window.location.href='tours.php'">Tours</button>
+    <br>
+    <button onclick="window.location.href='crear_habitacion.php';">Crear Habitacion</button>
 </body>
 </html>
